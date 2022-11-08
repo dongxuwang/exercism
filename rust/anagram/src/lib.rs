@@ -11,7 +11,9 @@ pub fn anagrams_for<'a>(word: &str, possible_anagrams: &[&'a str]) -> HashSet<&'
 
         x_lower.len() == word_lower.len() && x_lower != word_lower && x_sorted == word_sorted
 
-    }).copied().collect()
+    })
+        .copied()
+        .collect()
 }
 
 fn sort(word: &str) -> Vec<char> {
